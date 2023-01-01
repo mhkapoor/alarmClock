@@ -1,0 +1,45 @@
+.container {
+    height: 100vh;
+    background-color: #113148;;
+}
+
+.dropwdown-sizing{
+    color:#504f4f !important;
+    margin:3px;
+    border-radius: 10px !important;
+}
+.submit-btn-style{
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+    background-color: #1f6599;
+    color: white;
+    margin:10px;
+}
+.img-alarm{
+    width: 10%;
+}
+.time-btn-style{
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px !important;
+    height: 40px;
+    width: 100px;
+}
+.dropdown-menu.show {
+    max-height: 500% !important;
+    overflow: scroll !important;
+}
+.btn-group.disable{
+    opacity: 0.6;
+    pointer-events: none;
+}
+.submit-btn-style.disable{
+    opacity: 0.6 !important;
+    pointer-events: none !important;
+}
+.refresh-icon{
+    background-color: white;
+    border: 0px;
+    border-radius: 5px !important;
+}
