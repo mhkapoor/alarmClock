@@ -2,6 +2,9 @@
     height: 100vh;
     background-color: #113148;;
 }
+.wrapper{
+    max-width:100vw;
+}
 
 .dropwdown-sizing{
     color:#504f4f !important;
