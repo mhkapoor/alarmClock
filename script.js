@@ -32,7 +32,7 @@ let ringtone = new Audio("./files/alarm.wav");
 // Dropdown time listing logic
 for (let i = 12; i >= 1; i--) {
     i = i < 10 ? '0' + i : i;
-    let option = `<li key=${i} class="hour-list"><a class="dropdown-item" href="#">${i}</a></li>`
+    let option = `<li key=${i} class="hour-list"><a class="dropdown-item" >${i}</a></li>`
     if (selectMenu[0].firstElementChild == null) {
         selectMenu[0].insertAdjacentHTML("afterbegin", option);
     } else {
@@ -42,7 +42,7 @@ for (let i = 12; i >= 1; i--) {
 }
 for (let i = 59; i >= 0; i--) {
     i = i < 10 ? '0' + i : i;
-    let option = `<li key=${i} class="min-list"><a class="dropdown-item " href="#">${i}</a></li>`
+    let option = `<li key=${i} class="min-list"><a class="dropdown-item">${i}</a></li>`
 
     if (selectMenu[1].firstElementChild == null) {
         selectMenu[1].insertAdjacentHTML("afterbegin", option);
@@ -52,7 +52,7 @@ for (let i = 59; i >= 0; i--) {
 }
 let amp = ['AM', 'PM'];
 for (let i = 1; i >= 0; i--) {
-    let option = `<li key=${i} class="sec-list"><a class="dropdown-item " href="#">${amp[i]}</a></li>`
+    let option = `<li key=${i} class="sec-list"><a class="dropdown-item" >${amp[i]}</a></li>`
     if (selectMenu[2].firstElementChild == null) {
         selectMenu[2].insertAdjacentHTML("afterbegin", option);
     } else {
