@@ -116,7 +116,6 @@ function setAlarm() {
         return;
     }
     const time = `${alHours.innerHTML}:${alMinutes.innerHTML} ${alAmps.innerHTML}`
-    console.log(time);
     if (time.includes('Hour') || time.includes("Minutes") || time.includes("AM/PM")) {
         return alert("Selected time is not a valid time");
     }
@@ -141,7 +140,7 @@ function snoozeAlarm(){
     ringtone.pause();
     const time = `${alHours.innerHTML}:${alMinutes.innerHTML} ${alAmps.innerHTML}`
     if (!time.includes('Hour') && !time.includes("Minutes") && !time.includes("AM/PM")) {
-       let snooze = 1;
+       let snooze = 10;
        if(Number(alMinutes.innerHTML) < 50){
          snooze+=Number(alMinutes.innerHTML);
          alMinutes.innerHTML =snooze < 10 ? '0' + String(snooze) : String(snooze);
@@ -153,17 +152,18 @@ function snoozeAlarm(){
             alMinutes.innerHTML = '0'+ String(snooze);
          }
          alHours.innerHTML = Number(alHours.innerHTML) + 1;
-         if (alHours.innerHTML > 12) {  
+         if (alHours.innerHTML >= 12) {  
             alHours.innerHTML = alHours.innerHTML - 12;
-            console.log(alHours.innerHTML,"iffff");
-            alAmps.innerHTML = amp.filter(item=>item!=alAmps.innerHTML);
+            if(alHours.innerHTML == 0 ){
+                alAmps.innerHTML = amp.filter(item=>item!=alAmps.innerHTML);
+            }
+            alHours.innerHTML = alHours.innerHTML == 0 ? 12 : alHours.innerHTML;
+           
          }
          alHours.innerHTML =  alHours.innerHTML < 10 ? '0' + alHours.innerHTML : alHours.innerHTML;
          String(alHours.innerHTML);
        }
-
        alarmTime = `${alHours.innerHTML}:${alMinutes.innerHTML} ${amps}`
-       console.log(alarmTime,"alarmTime")
     }
 }
 
